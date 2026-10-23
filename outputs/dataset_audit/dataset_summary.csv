@@ -1,0 +1,11 @@
+metric,value
+total_images_on_disk,19526
+corrupted_images,0
+duplicate_images,0
+manifest_total_images,19526
+train_samples,15620
+val_samples,1953
+test_samples,1953
+majority_class,Good
+minority_class,Mixed
+training_imbalance_ratio,10.86
