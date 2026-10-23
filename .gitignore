@@ -23,6 +23,13 @@ fruit_quality_densenet121_final.keras
 densenet121_history.pkl
 class_distribution.png
 
+# LaTeX build intermediates
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/phase1_text_extracted.txt
+
 # Checkpoints (large binary models)
 outputs/checkpoints/*.pth
 !outputs/checkpoints/.gitkeep
