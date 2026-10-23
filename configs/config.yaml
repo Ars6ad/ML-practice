@@ -1,0 +1,51 @@
+dataset:
+  root_dir: "Processed Images_Fruits"
+  manifest_path: "fruit_quality_dataset_manifest.csv"
+  class_order:
+    - "Good"
+    - "Bad"
+    - "Mixed"
+  image_size: 224
+  num_classes: 3
+
+training:
+  architecture: "densenet121"
+  pretrained: true
+  batch_size: 64
+  eval_batch_size: 64
+  num_workers: 2
+  pin_memory: true
+  mixed_precision: true
+  seed: 42
+  epochs: 5
+  early_stopping_patience: 2
+  lr_head: 0.001
+  lr_backbone: 0.0001
+  weight_decay: 0.0001
+  checkpoint_metric: "macro_f1"
+
+augmentation:
+  rotation_degrees: 15
+  horizontal_flip_prob: 0.5
+  color_jitter:
+    brightness: 0.15
+    contrast: 0.15
+    saturation: 0.15
+    hue: 0.05
+  random_crop_scale:
+    - 0.85
+    - 1.0
+
+minority_sampling:
+  # In experiment 2, increases Mixed class representation via controlled WeightedRandomSampler
+  mixed_class_boost_factor: 5.0
+
+paths:
+  outputs_dir: "outputs"
+  checkpoints_dir: "outputs/checkpoints"
+  logs_dir: "outputs/logs"
+  predictions_dir: "outputs/predictions"
+  confusion_matrices_dir: "outputs/confusion_matrices"
+  plots_dir: "outputs/plots"
+  reports_dir: "outputs/reports"
+  audit_dir: "outputs/dataset_audit"
