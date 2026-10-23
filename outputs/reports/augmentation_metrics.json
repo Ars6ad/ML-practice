@@ -1,0 +1,104 @@
+{
+    "accuracy": 0.9943676395289298,
+    "balanced_accuracy": 0.9958316138582749,
+    "macro_precision": 0.9928279116447087,
+    "macro_recall": 0.9958316138582749,
+    "macro_f1": 0.9943221618805484,
+    "weighted_f1": 0.9943687068664521,
+    "per_class": {
+        "Good": {
+            "precision": 0.9965665236051502,
+            "recall": 0.9948586118251928,
+            "f1": 0.9957118353344768,
+            "support": 1167
+        },
+        "Bad": {
+            "precision": 0.9911764705882353,
+            "recall": 0.9926362297496318,
+            "f1": 0.9919058130978661,
+            "support": 679
+        },
+        "Mixed": {
+            "precision": 0.9907407407407407,
+            "recall": 1.0,
+            "f1": 0.9953488372093023,
+            "support": 107
+        }
+    },
+    "mixed_class": {
+        "precision": 0.9907407407407407,
+        "recall": 1.0,
+        "f1": 0.9953488372093023,
+        "support": 107
+    },
+    "confusion_matrix": [
+        [
+            1161,
+            6,
+            0
+        ],
+        [
+            4,
+            674,
+            1
+        ],
+        [
+            0,
+            0,
+            107
+        ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n        Good       1.00      0.99      1.00      1167\n         Bad       0.99      0.99      0.99       679\n       Mixed       0.99      1.00      1.00       107\n\n    accuracy                           0.99      1953\n   macro avg       0.99      1.00      0.99      1953\nweighted avg       0.99      0.99      0.99      1953\n",
+    "inference_time_seconds": 82.96491718292236,
+    "throughput_images_per_sec": 23.540070505874123,
+    "experiment_type": "augmentation",
+    "checkpoint_path": "outputs/checkpoints\\augmentation_best.pth",
+    "split": "test",
+    "total_samples": 1953,
+    "confidence_intervals_95": {
+        "accuracy": {
+            "mean": 0.994342037890425,
+            "ci_lower": 0.9907834101382489,
+            "ci_upper": 0.9974398361495136
+        },
+        "balanced_accuracy": {
+            "mean": 0.995802804514158,
+            "ci_lower": 0.9928676795814557,
+            "ci_upper": 0.9980864903986165
+        },
+        "macro_f1": {
+            "mean": 0.9942995660838774,
+            "ci_lower": 0.989538740697773,
+            "ci_upper": 0.9977049815025216
+        },
+        "mixed_recall": {
+            "mean": 1.0,
+            "ci_lower": 1.0,
+            "ci_upper": 1.0
+        },
+        "mixed_f1": {
+            "mean": 0.9953478830417807,
+            "ci_lower": 0.9841269841269841,
+            "ci_upper": 1.0
+        }
+    },
+    "error_analysis": {
+        "mixed_total_true": 107,
+        "mixed_true_positives": 107,
+        "mixed_false_negatives": 0,
+        "mixed_false_positives": 1,
+        "sample_false_negatives": [],
+        "sample_false_positives": [
+            {
+                "image_path": "Bad Quality_Fruits/Lime_Bad/IMG_7419.JPG",
+                "ground_truth": "Bad",
+                "predicted": "Mixed",
+                "is_correct": false,
+                "prob_Good": 1.9510093807184603e-06,
+                "prob_Bad": 0.326129674911499,
+                "prob_Mixed": 0.6738684177398682,
+                "error_type": "False Positive (False Mixed alarm)"
+            }
+        ]
+    }
+}

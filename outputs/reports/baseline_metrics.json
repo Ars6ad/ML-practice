@@ -1,0 +1,104 @@
+{
+    "accuracy": 0.9959037378392217,
+    "balanced_accuracy": 0.9977149385889746,
+    "macro_precision": 0.993512219702696,
+    "macro_recall": 0.9977149385889746,
+    "macro_f1": 0.9955937503898871,
+    "weighted_f1": 0.9959070746419346,
+    "per_class": {
+        "Good": {
+            "precision": 1.0,
+            "recall": 0.9931448157669237,
+            "f1": 0.9965606190885641,
+            "support": 1167
+        },
+        "Bad": {
+            "precision": 0.9897959183673469,
+            "recall": 1.0,
+            "f1": 0.9948717948717949,
+            "support": 679
+        },
+        "Mixed": {
+            "precision": 0.9907407407407407,
+            "recall": 1.0,
+            "f1": 0.9953488372093023,
+            "support": 107
+        }
+    },
+    "mixed_class": {
+        "precision": 0.9907407407407407,
+        "recall": 1.0,
+        "f1": 0.9953488372093023,
+        "support": 107
+    },
+    "confusion_matrix": [
+        [
+            1159,
+            7,
+            1
+        ],
+        [
+            0,
+            679,
+            0
+        ],
+        [
+            0,
+            0,
+            107
+        ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n        Good       1.00      0.99      1.00      1167\n         Bad       0.99      1.00      0.99       679\n       Mixed       0.99      1.00      1.00       107\n\n    accuracy                           1.00      1953\n   macro avg       0.99      1.00      1.00      1953\nweighted avg       1.00      1.00      1.00      1953\n",
+    "inference_time_seconds": 83.82894849777222,
+    "throughput_images_per_sec": 23.297441218076376,
+    "experiment_type": "baseline",
+    "checkpoint_path": "outputs/checkpoints\\baseline_best.pth",
+    "split": "test",
+    "total_samples": 1953,
+    "confidence_intervals_95": {
+        "accuracy": {
+            "mean": 0.9958960573476702,
+            "ci_lower": 0.992831541218638,
+            "ci_upper": 0.9984639016897081
+        },
+        "balanced_accuracy": {
+            "mean": 0.9977117638480499,
+            "ci_lower": 0.9959904905794525,
+            "ci_upper": 0.9991319444444445
+        },
+        "macro_f1": {
+            "mean": 0.9955517751309354,
+            "ci_lower": 0.9912233322325126,
+            "ci_upper": 0.9984692348399928
+        },
+        "mixed_recall": {
+            "mean": 1.0,
+            "ci_lower": 1.0,
+            "ci_upper": 1.0
+        },
+        "mixed_f1": {
+            "mean": 0.9952370839863866,
+            "ci_lower": 0.9834231123388583,
+            "ci_upper": 1.0
+        }
+    },
+    "error_analysis": {
+        "mixed_total_true": 107,
+        "mixed_true_positives": 107,
+        "mixed_false_negatives": 0,
+        "mixed_false_positives": 1,
+        "sample_false_negatives": [],
+        "sample_false_positives": [
+            {
+                "image_path": "Good Quality_Fruits/Apple_Good/IMG20200730132617_01.jpg",
+                "ground_truth": "Good",
+                "predicted": "Mixed",
+                "is_correct": false,
+                "prob_Good": 0.43287229537963867,
+                "prob_Bad": 1.644049189053476e-05,
+                "prob_Mixed": 0.5671112537384033,
+                "error_type": "False Positive (False Mixed alarm)"
+            }
+        ]
+    }
+}
