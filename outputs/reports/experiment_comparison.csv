@@ -1,0 +1,4 @@
+experiment,accuracy,balanced_accuracy,macro_precision,macro_recall,macro_f1,weighted_f1,mixed_precision,mixed_recall,mixed_f1,training_time_seconds,best_epoch
+baseline,0.9959,0.9977,0.9935,0.9977,0.9956,0.9959,0.9907,1.0,0.9953,1802.2,4
+augmentation,0.9944,0.9958,0.9928,0.9958,0.9943,0.9944,0.9907,1.0,0.9953,1206.5,4
+class_weighted,0.9923,0.9923,0.9807,0.9923,0.9864,0.9923,0.955,0.9907,0.9725,660.3,2

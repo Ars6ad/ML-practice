@@ -1,0 +1,155 @@
+{
+    "accuracy": 0.9923195084485407,
+    "balanced_accuracy": 0.9922700217122586,
+    "macro_precision": 0.9807058715809002,
+    "macro_recall": 0.9922700217122586,
+    "macro_f1": 0.9863720012397167,
+    "weighted_f1": 0.9923428850450547,
+    "per_class": {
+        "Good": {
+            "precision": 0.997411561691113,
+            "recall": 0.9905741216795202,
+            "f1": 0.9939810834049871,
+            "support": 1167
+        },
+        "Bad": {
+            "precision": 0.9897510980966325,
+            "recall": 0.9955817378497791,
+            "f1": 0.9926578560939795,
+            "support": 679
+        },
+        "Mixed": {
+            "precision": 0.954954954954955,
+            "recall": 0.9906542056074766,
+            "f1": 0.9724770642201835,
+            "support": 107
+        }
+    },
+    "mixed_class": {
+        "precision": 0.954954954954955,
+        "recall": 0.9906542056074766,
+        "f1": 0.9724770642201835,
+        "support": 107
+    },
+    "confusion_matrix": [
+        [
+            1156,
+            6,
+            5
+        ],
+        [
+            3,
+            676,
+            0
+        ],
+        [
+            0,
+            1,
+            106
+        ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n        Good       1.00      0.99      0.99      1167\n         Bad       0.99      1.00      0.99       679\n       Mixed       0.95      0.99      0.97       107\n\n    accuracy                           0.99      1953\n   macro avg       0.98      0.99      0.99      1953\nweighted avg       0.99      0.99      0.99      1953\n",
+    "inference_time_seconds": 39.20847535133362,
+    "throughput_images_per_sec": 49.810659111323275,
+    "experiment_type": "class_weighted",
+    "checkpoint_path": "outputs/checkpoints\\class_weighted_best.pth",
+    "split": "test",
+    "total_samples": 1953,
+    "confidence_intervals_95": {
+        "accuracy": {
+            "mean": 0.9922401433691758,
+            "ci_lower": 0.9877112135176651,
+            "ci_upper": 0.9959037378392217
+        },
+        "balanced_accuracy": {
+            "mean": 0.9923117572959018,
+            "ci_lower": 0.984185812538549,
+            "ci_upper": 0.9970996471197873
+        },
+        "macro_f1": {
+            "mean": 0.9860791537303222,
+            "ci_lower": 0.9764907516557254,
+            "ci_upper": 0.9936233476412372
+        },
+        "mixed_recall": {
+            "mean": 0.990984306465099,
+            "ci_lower": 0.9687417763157895,
+            "ci_upper": 1.0
+        },
+        "mixed_f1": {
+            "mean": 0.9716984536901057,
+            "ci_lower": 0.9468069369255948,
+            "ci_upper": 0.9913062218890555
+        }
+    },
+    "error_analysis": {
+        "mixed_total_true": 107,
+        "mixed_true_positives": 106,
+        "mixed_false_negatives": 1,
+        "mixed_false_positives": 5,
+        "sample_false_negatives": [
+            {
+                "image_path": "Mixed Qualit_Fruits/Orange/IMG20200728190250.jpg",
+                "ground_truth": "Mixed",
+                "predicted": "Bad",
+                "is_correct": false,
+                "prob_Good": 0.0008320654160343111,
+                "prob_Bad": 0.8625003695487976,
+                "prob_Mixed": 0.13666751980781555,
+                "error_type": "False Negative (True Mixed missed)"
+            }
+        ],
+        "sample_false_positives": [
+            {
+                "image_path": "Good Quality_Fruits/Orange_Good/IMG20200728190515.jpg",
+                "ground_truth": "Good",
+                "predicted": "Mixed",
+                "is_correct": false,
+                "prob_Good": 0.005291839130222797,
+                "prob_Bad": 0.00532008009031415,
+                "prob_Mixed": 0.989388108253479,
+                "error_type": "False Positive (False Mixed alarm)"
+            },
+            {
+                "image_path": "Good Quality_Fruits/Lime_Good/IMG20200728191306.jpg",
+                "ground_truth": "Good",
+                "predicted": "Mixed",
+                "is_correct": false,
+                "prob_Good": 0.25519710779190063,
+                "prob_Bad": 0.024890253320336342,
+                "prob_Mixed": 0.7199126482009888,
+                "error_type": "False Positive (False Mixed alarm)"
+            },
+            {
+                "image_path": "Good Quality_Fruits/Orange_Good/IMG20200728190513.jpg",
+                "ground_truth": "Good",
+                "predicted": "Mixed",
+                "is_correct": false,
+                "prob_Good": 0.13056963682174683,
+                "prob_Bad": 0.008499235846102238,
+                "prob_Mixed": 0.8609310984611511,
+                "error_type": "False Positive (False Mixed alarm)"
+            },
+            {
+                "image_path": "Good Quality_Fruits/Apple_Good/IMG20200730132617_01.jpg",
+                "ground_truth": "Good",
+                "predicted": "Mixed",
+                "is_correct": false,
+                "prob_Good": 0.26797792315483093,
+                "prob_Bad": 0.0026868563145399094,
+                "prob_Mixed": 0.7293353080749512,
+                "error_type": "False Positive (False Mixed alarm)"
+            },
+            {
+                "image_path": "Good Quality_Fruits/Orange_Good/IMG20200728190526.jpg",
+                "ground_truth": "Good",
+                "predicted": "Mixed",
+                "is_correct": false,
+                "prob_Good": 0.4183076024055481,
+                "prob_Bad": 0.10626592487096786,
+                "prob_Mixed": 0.4754265248775482,
+                "error_type": "False Positive (False Mixed alarm)"
+            }
+        ]
+    }
+}
