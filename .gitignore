@@ -1,0 +1,27 @@
+# Environment
+.venv/
+venv/
+env/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*$py.class
+
+# IDE & OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Dataset files & raw weights
+Processed Images_Fruits/
+*.keras
+*.h5
+fruit_quality_densenet121_final.keras
+densenet121_history.pkl
+
+# Checkpoints (large binary models)
+outputs/checkpoints/*.pth
+!outputs/checkpoints/.gitkeep
